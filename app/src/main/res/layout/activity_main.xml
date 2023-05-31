@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="0.6">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/border"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/notime"
+                android:layout_weight="1"
+                android:text="NO TIME LIMIT"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@color/teal_700"
+                android:layout_margin="10dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="NORMAL"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@color/teal_700"
+                android:layout_margin="10dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="HARD"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@color/teal_700"
+                android:layout_margin="10dp">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        android:layout_weight="1.5">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:textColor="@color/teal_700"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:text="REMOVE ADS"
+            android:textSize="20dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="SHARE"
+            android:textColor="@color/teal_700"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/border"
+            android:layout_margin="10dp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="MORE GAMES"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/teal_700"
+            android:gravity="center"
+            android:background="@drawable/border"
+            android:layout_margin="10dp">
+
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>
