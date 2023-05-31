@@ -79,67 +79,67 @@ public class GridAdapter extends BaseAdapter
             @Override
             public void onFinish() {
 
-                startGame(mask,relativeLayout);
+                //startGame(mask,relativeLayout);
             }
         };
     }
 
-    private void startGame(View mask, RelativeLayout relativeLayout)
-    {
-        int interval=5000;
-        Handler handler = new Handler();
-        runnable = new Runnable() {
-            public void run() {
-                mask.setVisibility(View.VISIBLE);
-            }
-        };
-        //handler.postAtTime(runnable, System.currentTimeMillis() + interval);
-        handler.postDelayed(runnable, interval);
-        relativeLayout.setOnClickListener(v -> {
-            if (click == 1) {
-                mask.setVisibility(View.INVISIBLE);
-                pos1 = holder.getAdapterPosition();
-                firstview = holder.view1;
-                click = 3;
-
-                runnable = new Runnable() {
-                    public void run() {
-                        click = 2;
-                    }
-                };
-                handler.postAtTime(runnable, System.currentTimeMillis() + interval);
-                handler.postDelayed(runnable, 100);
-                System.out.println("first click");
-            }
-            if (click == 2) {
-                holder.view1.setVisibility(View.INVISIBLE);
-                pos2 = holder.getAdapterPosition();
-                click = 3;
-                System.out.println("second click");
-                if (imgArr.get(pos1).equals(imgArr.get(pos2))) {
-                    System.out.println("match");
-                    runnable = new Runnable() {
-                        public void run() {
-                            click = 1;
-                        }
-                    };
-                    handler.postAtTime(runnable, System.currentTimeMillis() + interval);
-                    handler.postDelayed(runnable, 500);
-                } else {
-                    System.out.println("not match");
-                    runnable = new Runnable() {
-                        public void run() {
-                            holder.view1.setVisibility(View.VISIBLE);
-                            firstview.setVisibility(View.VISIBLE);
-                            click = 1;
-                        }
-                    };
-                    handler.postAtTime(runnable, System.currentTimeMillis() + interval);
-                    handler.postDelayed(runnable, 500);
-                }
-            }
-        });
-    }
-    }
+//    private void startGame(View mask, RelativeLayout relativeLayout)
+//    {
+//        int interval=5000;
+//        Handler handler = new Handler();
+//        runnable = new Runnable() {
+//            public void run() {
+//                mask.setVisibility(View.VISIBLE);
+//            }
+//        };
+//        //handler.postAtTime(runnable, System.currentTimeMillis() + interval);
+//        handler.postDelayed(runnable, interval);
+//        relativeLayout.setOnClickListener(v -> {
+//            if (click == 1) {
+//                mask.setVisibility(View.INVISIBLE);
+//                pos1 = holder.getAdapterPosition();
+//                firstview = holder.view1;
+//                click = 3;
+//
+//                runnable = new Runnable() {
+//                    public void run() {
+//                        click = 2;
+//                    }
+//                };
+//                handler.postAtTime(runnable, System.currentTimeMillis() + interval);
+//                handler.postDelayed(runnable, 100);
+//                System.out.println("first click");
+//            }
+//            if (click == 2) {
+//                holder.view1.setVisibility(View.INVISIBLE);
+//                pos2 = holder.getAdapterPosition();
+//                click = 3;
+//                System.out.println("second click");
+//                if (imgArr.get(pos1).equals(imgArr.get(pos2))) {
+//                    System.out.println("match");
+//                    runnable = new Runnable() {
+//                        public void run() {
+//                            click = 1;
+//                        }
+//                    };
+//                    handler.postAtTime(runnable, System.currentTimeMillis() + interval);
+//                    handler.postDelayed(runnable, 500);
+//                } else {
+//                    System.out.println("not match");
+//                    runnable = new Runnable() {
+//                        public void run() {
+////                            holder.view1.setVisibility(View.VISIBLE);
+////                            firstview.setVisibility(View.VISIBLE);
+////                            click = 1;
+//                        }
+//                    };
+//                    handler.postAtTime(runnable, System.currentTimeMillis() + interval);
+//                    handler.postDelayed(runnable, 500);
+//                }
+//            }
+//        });
+//    }
+    //}
 
 }
