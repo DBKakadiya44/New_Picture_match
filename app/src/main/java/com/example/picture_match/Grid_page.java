@@ -3,6 +3,7 @@ package com.example.picture_match;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.GridView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,12 +21,14 @@ public class Grid_page extends AppCompatActivity
     private ArrayList<String> imgArr=new ArrayList<>();
     private List<String> arrayList=new ArrayList<>();
     TextView countdown;
+    ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.grid_page);
         countdown=findViewById(R.id.countdown);
         gridView = findViewById(R.id.gridview);
+        progressBar=findViewById(R.id.progress);
 
             String[] images = new String[0];
             try {
@@ -48,7 +51,7 @@ public class Grid_page extends AppCompatActivity
             Log.d("TTT", "getImage: Selected Images= "+arrayList);
 
 
-        adapter = new GridAdapter(Grid_page.this, arrayList,countdown);
+        adapter = new GridAdapter(Grid_page.this, arrayList,countdown,progressBar);
         gridView.setAdapter(adapter);
 
     }
